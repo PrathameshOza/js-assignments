@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 2 Day 2</title>
+</head>
+<body>
+    <script>
+        console.log("Declaration with var");
+        var a="Pro";
+        console.log(a);
+        var a="Yash";
+        console.log(a);
+        
+        /*console.log("Declaration with let");
+        let a="Pro";
+        console.log(a);
+        let a="Yash";
+        console.log(a);
+        */ //remove comments to see error in console.
+
+        // 1. var can be redeclared but let variable cannot be redeclared
+
+
+        let b="Jay";
+        console.log(b);
+        b="Prem";
+        console.log(b);
+
+        //2. let variable can be updated but not redeclared.
+
+
+        var c="69";
+        console.log(c);
+        {
+            let c=44;
+            console.log(c);
+        }
+        console.log(c);
+
+        //3. 'let' holds it value in particular scope or block of code 
+        //where as 'var' holds it value globally if not changed.
+
+        const age=22;
+        console.log(age);
+        //age=45;       //remove comment to see error.
+        console.log(age);
+        //4. age=45 will give error because 'const' cannot be updated.
+
+
+        //const behave differently when it is a object.
+        const person= {
+            id: 100,
+            age: 65
+        }
+        console.log(person);
+        person.age=55;
+        console.log(person);
+
+        //5. 'const' can update data when its object but not when it of other datatype
+    </script>
+</body>
+</html>

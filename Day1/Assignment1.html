@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 1 Day1 </title>
+
+
+</head>
+<body>
+    <script>
+        console.time();
+        console.log("Hey! I am visible in your browser console");
+        console.log([1,2,3,4]);     //array
+        console.error("I am just an error");
+        console.warn("I give developer a warning for some particular code snippet");
+
+        var a = {Ticketid: 101, Name: 'Prathamesh', Charges: 3000};
+        var b = {Ticketid: 102, Name: 'Yash', Charges: 2000};
+        var c = {Ticketid: 103, Name: 'Prathamesh', Charges: 3000};
+        console.table({a,b,c});
+        console.count(a);
+        console.log('%c New Message','color: green;');
+        console.timeEnd();
+        // console.clear() will clear the console and leave message 'Console was cleared' in chrome.
+    </script>
+    
+</body>
+</html>

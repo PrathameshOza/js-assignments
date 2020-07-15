@@ -1,0 +1,57 @@
+Datatypes In Javascript
+
+--> In Javascript Datatypes are declared using 'var' 'let' 'const'
+
+1. Number
+var x= 16;
+
+2. String
+var x="Yash"; Double qoute
+var x='Yash'; Single qoute
+
+3.Concatenation between String and Num in Javascript
+3.1 var x= 16+'Yash';
+    o/p= 16Yash
+3.2 var x='Yash'+ 16
+    o/p= Yash16
+3.3 var x='16'+'16'
+    o/p= 1616
+3.4 var x= 25+5+"Yash";
+    o/p= 30Yash
+3.5 var x= 'Yash'+25+5;
+    o/p= Yash255
+
+4. Booleans
+var x=10;
+var y=20;
+var z=10;
+o/p=
+    (x==y) (returns)  'false'
+    (x==z) (returns)  'true'
+
+var x= true;
+o/p=true (boolean value)
+
+6. Arrays
+
+var country= ["Italy","Maldives","India"];
+o/p= Italy,Maldives, India
+Note: Array indexed from 0;
+
+7. Objects
+var person = {name: "Yash", age=12}
+
+8. typeof
+
+typeof ""             // Returns "string"
+typeof "John"         // Returns "string"
+typeof "John Doe"     // Returns "string" 
+typeof 0              // Returns "Number"
+typeof 3.14           // Returns "Number"
+
+9. Undefined
+var age;    // Value is undefined, type is undefined
+
+10. Null
+var name="Yash";
+name=null;
