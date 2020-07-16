@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 2</title>
+</head>
+<body>
+    <script>
+        console.log("STRING METHODS");
+        let str="They don't know that we know they know we know! ";
+        console.log(str);
+        console.log(str.substring(0,15)); //substring(start,end)
+        console.log(str.replace('They','We'));
+        console.log(str.repeat(2));
+        console.log(str.charCodeAt(0));//returns Unicode of letter at index
+        let str2="What are you talking?";
+        console.log(str.concat(str2));
+        console.log(str.includes('know'));//returns whether it contains the given value or not
+        console.log(str.localeCompare(str2));
+        console.log(str.match(/now/g));//returns how many times the give patterns appears in 'str'
+        console.log(str.search('that'));//returns index where word starts
+        console.log(str.slice(0,15));//slice and give o/p for given index range
+        let str3 = "     Hello World!     ";
+        console.log(str3.trim());//trim white spaces
+        console.log(str3.valueOf());
+
+
+
+        console.log("ARRAY METHODS");
+        let arr=["one","two","three"];
+        let arr2=[1,2,3];
+        console.log(arr);
+        console.log(arr.toString());
+        console.log(arr.push('four'));
+        console.log(arr);
+        console.log(arr.splice(2,0,'five','six'));//to add using splice
+        console.log(arr);
+        console.log(arr.splice(2,2));//to delete using splice
+        console.log(arr);
+        console.log(arr.concat(arr2));
+        arr2=arr.slice(3);
+        console.log(arr);
+        console.log(arr2);
+        console.log(arr.sort());
+
+
+
+    </script>
+</body>
+</html>
