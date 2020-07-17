@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 1</title>
+</head>
+<body>
+    <script>
+        console.log("Assignment 1");
+        let checkNum= function(){
+            let val;
+            let num = +prompt("Enter the number to check even or odd",0);
+            if(num%2===0)
+            {
+                val=`The number entered is ${num} and Number is Even`;
+                return val;
+            }
+            else{
+                val=`The number entered is ${num} and Number is Odd`;
+                return val;
+            }
+        }
+        let res=checkNum();
+        console.log(res);
+</script>
+</body>
+</html>
