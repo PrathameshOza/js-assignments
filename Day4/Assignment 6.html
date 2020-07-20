@@ -1,0 +1,39 @@
+<!--Question 6:
+Rewrite the function using '?' or '||'
+Write a loop which prompts for a number greater than 100. If the visitor enters another number – ask them
+to input again.
+The loop must ask for a number until either the visitor enters a number greater than 100 or cancels the
+input/enters an empty line.
+Here we can assume that the visitor only inputs numbers. There’s no need to implement a special
+handling for a non-numeric input in this task.-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 6</title>
+    <script>
+        
+        function number(){
+        let num =prompt("Enter number less than 100");
+        while (num<100 && num>0) {
+            alert("Input again");
+            num=prompt("Enter number greater than 100");
+            if(num==null || num=='')
+                break;
+        }
+        if(num>100)
+            console.log(`${num} is greater than 100`);
+        else{
+            console.log("You hit 'Cancel' or 'OK' button.")
+        }
+    }
+
+    number();
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
