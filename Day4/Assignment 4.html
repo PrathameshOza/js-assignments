@@ -1,0 +1,63 @@
+<!--Question 4:
+Make a Calculator in Javascript which can do operations as Addtion, Subtraction, Multiplication, Division,
+Square root, Percentage.-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 4</title>
+</head>
+<body>
+    <h1>Calculator</h1>
+    <p>Inputs for user: 1.Addition  2.Subtraction  3.Multiplication  4.Division  5.Square_Root  6.Percentage</p>
+    <script>
+        console.log("1.Addition  2.Subtraction  3.Multiplication  4.Division  5.Square_Root  6.Percentage")
+        var op= +prompt("Which operation you want to perform?");
+        if(op===1)
+        {
+            let inp1=+prompt("Input 1: ");
+            let inp2=+prompt("Input 2: ");
+            console.log("1. Addition: ")
+            console.log(inp1+inp2);
+        }
+        else if(op===2){
+            let inp1=+prompt("Input 1: ");
+            let inp2=+prompt("Input 2: ");
+            console.log("2. Subtraction: ")
+            console.log(inp1-inp2);
+        }
+        else if(op===3)
+        {
+            let inp1=+prompt("Input 1: ");
+            let inp2=+prompt("Input 2: ");
+            console.log("3. Multiplication: ")
+            console.log(inp1*inp2);
+        }
+        else if(op===4)
+        {
+            let inp1=+prompt("Input 1: ");
+            let inp2=+prompt("Input 2: ");
+            console.log("4. Division: ")
+            console.log(inp1/inp2);
+        }
+        else if(op===5)
+        {
+            let inp1=+prompt("Input: ");
+            console.log("5. Square_Root: ")
+            console.log(Math.sqrt(inp1));
+        }
+        else if(op===6)
+        {
+            let inp1=+prompt("Input 1: ");
+            let inp2=+prompt("Input 2: ");
+            console.log("6. Percentage: ")
+            console.log((inp1/inp2)*100+" %");
+        }
+        else{
+            alert("Incorrect option selected!!");
+            console.log("Incorrect option selected!!");
+        }
+    </script>
+</body>
+</html>
