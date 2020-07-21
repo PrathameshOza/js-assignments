@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 1</title>
+</head>
+<body>
+    <script>
+        let arr=[];
+        while(true){
+            let z=prompt("Do you want add number. yes or no");
+            if(z=='y' || z=='yes')
+            {
+                let num=+prompt("Add Number");
+                arr[arr.length]=num;
+                
+            }
+            else if((z=='no' || z=='n') && arr.length!=0){
+                alert("Numbers added")
+                break;
+            }
+            else
+            {
+                alert("No Numbers added");
+                break;
+            }
+            
+    }
+    console.log(arr);
+    let odd=arr.filter(el=>el%2==1);
+    console.log(odd);
+    let cubes=odd.map(el=>el**3);
+    console.log(cubes);
+    </script>
+</body>
+</html>

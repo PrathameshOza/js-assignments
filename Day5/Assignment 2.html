@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 2</title>
+</head>
+<body>
+    <script>
+        class User{
+            constructor(name, age, email) {
+                this.name=name;
+                this.age=age;
+                this.email=email;
+                this.luCoins = 0;
+                this.courses = [];
+            }
+            login(){
+                console.log(`${this.name} has logged In`);
+                return this;
+            }
+            logout(){
+                console.log(`${this.name} has logged Out`);
+                return this;
+            }
+        }
+        
+        
+        class Moderator extends User{
+            constructor(name,age,email,luCoins) {
+                super(name,age,email);
+                this.luCoins=0;
+            }
+                addCoins(){
+                    this.luCoins++;
+                    console.log(`${this.name} has ${this.luCoins} coins`);
+                    return this;
+                }
+                removeCoins(){
+                    this.luCoins--;
+                    console.log(`${this.name} has ${this.luCoins} coins`);
+                    return this;
+                }
+        }
+
+        class Admin extends Moderator{
+            addCourse(user,course){
+                user.courses.push(course);
+                console.log(user);
+            }
+            removeCourse(user,course){
+                let i= user.courses.indexOf('course');
+                user.courses.splice(i,1);
+                console.log(user);
+            }
+        }
+
+
+
+        let user1 = new User('Chandler',30,'bing@gmail.com');
+        user1.login().logout();                                          //user1 can login logout
+        let user2 = new User('Joey',29,'joe@gmail.com');
+
+        let mod1 = new Moderator('Chandler',30,'bing@gmail.com',0);
+        mod1.login().addCoins().addCoins().addCoins().removeCoins().removeCoins().logout(); 
+        //moderator can add and remove coins of user;
+
+        let admin = new Admin('Ross',34,'ross@gmail.com');  //admin can add and delete courses
+        admin.addCourse(user1,'JavaScript');                //adding courses
+        admin.addCourse(user1,'Python');
+        admin.addCourse(user1,'Java');
+        admin.removeCourse(user1,'Python');                 //removing courses
+        admin.removeCourse(user1,'Java');
+    </script>
+</body>
+</html>
