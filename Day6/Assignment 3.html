@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 3</title>
+</head>
+
+<style>
+    .demo{
+        background-color: black;
+        color: white;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+</style>
+<body id="demo">
+    <h1 id="welcm">Welcome</h1>
+
+    <div id="time">
+    </div>
+    <br>
+    <div>
+    <button type="button" id="dark">Dark Mode</button>
+    </div>
+
+
+    <script>
+        let name=prompt("Tell us your name");
+        let a=document.getElementById("welcm");
+        a.innerText=`Welcome ${name}`;
+
+        const ctime = document.getElementById('time');
+      
+        function clock(){
+            let date = new Date();
+            let time = date.toLocaleTimeString();
+            ctime.innerText = time;
+        }
+        // clock();
+        setInterval(clock,1000);
+
+        let dmode = document.getElementById('dark');
+        let body = document.getElementById('demo');
+
+        dmode.onclick = function changeColor(){
+            body.classList.toggle('demo');
+        }
+
+
+
+    </script>
+</body>
+</html>

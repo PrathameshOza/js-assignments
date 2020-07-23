@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 1</title>
+    <style>
+        body{
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body id="div1">
+    <h1>Background will change every 5sec.</h1>
+    <script>
+        var i=0;
+        function divchange() {
+            var divtag=document.getElementById("div1");
+            var bgColor = ["purple","yellow","blue","brown","gray","red","green"];
+
+            divtag.style.backgroundColor=bgColor[i];
+            i=(i+1)%bgColor.length;
+        }
+        setInterval(divchange,5000);
+    </script>
+</body>
+</html>
